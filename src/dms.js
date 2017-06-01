@@ -1,26 +1,4 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* Geodesy representation conversion functions                        (c) Chris Veness 2002-2017  */
-/*                                                                                   MIT Licence  */
-/* www.movable-type.co.uk/scripts/latlong.html                                                    */
-/* www.movable-type.co.uk/scripts/geodesy/docs/module-dms.html                                    */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-'use strict';
-/* eslint no-irregular-whitespace: [2, { skipComments: true }] */
-
-
-/**
- * Latitude/longitude points may be represented as decimal degrees, or subdivided into sexagesimal
- * minutes and seconds.
- *
- * @module dms
- */
-
-
-/**
- * Functions for parsing and representing degrees / minutes / seconds.
- * @class Dms
- */
 var Dms = {};
 
 // note Unicode Degree = U+00B0. Prime = U+2032, Double prime = U+2033
@@ -221,4 +199,4 @@ Dms.compassPoint = function(bearing, precision) {
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = Dms; // ≡ export default Dms
+export default Dms; // ≡ export default Dms

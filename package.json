@@ -1,15 +1,19 @@
 {
+    "private": true,
     "name": "geodesy",
     "description": "Libraries of geodesy functions",
-    "homepage": "http://www.movable-type.co.uk/scripts/latlong.html",
-    "repository": { "type": "git", "url": "https://github.com/chrisveness/geodesy" },
-    "keywords": [ "geodesy", "latitude", "longitude", "distance", "bearing", "haversine", "vincenty", "rhumb", "ellipsoid", "datum", "wgs84", "utm", "mgrs" ],
     "author": "Chris Veness",
     "version": "1.1.1",
     "license": "MIT",
-    "main": "npm.js",
-    "bugs": "https://github.com/chrisveness/geodesy/issues",
+    "main": "dist/index.js",
+    "jsnext:main": "index.js",
+    "files": [
+        "index.js",
+        "dist/",
+        "src/"
+    ],
     "scripts": {
+        "pretest": "rollup --config rollup.config.js",
         "test": "mocha test/*.js",
         "lint": "eslint ."
     },
@@ -19,29 +23,13 @@
         "jsdoc": "^3.4.0",
         "mocha": "^3.0.2",
         "npm-check": "^5.2.3",
-        "npm-check-updates": "^2.8.0"
-    },
-    "eslintConfig": {
-        "env": {
-            "browser": true,
-            "node": true,
-            "mocha": true
-        },
-        "extends": "eslint:recommended",
-        "rules": {
-            "array-bracket-spacing": [ "error", "always" ],
-            "comma-dangle": [ "error", "always-multiline" ],
-            "curly": [ "error", "multi-line" ],
-            "indent": [ "error", 4, { "SwitchCase": 1 } ],
-            "key-spacing": [ "error", { "align": "value" } ],
-            "no-console": "warn",
-            "no-redeclare": "warn",
-            "no-shadow": "warn",
-            "no-unused-vars": "warn",
-            "object-curly-spacing": [ "error", "always" ],
-            "quotes": [ "error", "single", "avoid-escape" ],
-            "semi": [ "error", "always" ],
-            "strict": [ "error", "global" ]
-        }
+        "npm-check-updates": "^2.8.0",
+        "rollup": "^0.41.6",
+        "rollup-plugin-cleanup": "^1.0.0",
+        "rollup-plugin-commonjs": "^8.0.2",
+        "rollup-plugin-json": "^2.1.1",
+        "rollup-plugin-node-builtins": "^2.1.2",
+        "rollup-plugin-node-globals": "^1.1.0",
+        "rollup-plugin-node-resolve": "^3.0.0"
     }
 }

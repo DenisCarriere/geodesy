@@ -249,4 +249,4 @@ if (Math.sign === undefined) {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = Vector3d; // ≡ export default Vector3d
+export default Vector3d

@@ -1,12 +1,4 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* Vincenty Direct and Inverse Solution of Geodesics on the Ellipsoid (c) Chris Veness 2002-2017  */
-/*                                                                                   MIT Licence  */
-/* www.movable-type.co.uk/scripts/latlong-vincenty.html                                           */
-/* www.movable-type.co.uk/scripts/geodesy/docs/module-latlon-vincenty.html                        */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-'use strict';
-if (typeof module!='undefined' && module.exports) var LatLon = require('./latlon-ellipsoidal.js'); // ≡ import LatLon from 'latlon-ellipsoidal.js'
+import LatLon from './latlon-ellipsoidal'
 
 
 /**
@@ -275,4 +267,4 @@ if (Number.prototype.toDegrees === undefined) {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = LatLon; // ≡ export default LatLon
+export default LatLon

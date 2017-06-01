@@ -1,14 +1,5 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/*  MGRS / UTM Conversion Functions                                   (c) Chris Veness 2014-2016  */
-/*                                                                                   MIT Licence  */
-/* www.movable-type.co.uk/scripts/latlong-utm-mgrs.html                                           */
-/* www.movable-type.co.uk/scripts/geodesy/docs/module-mgrs.html                                   */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-'use strict';
-if (typeof module!='undefined' && module.exports) var Utm = require('./utm.js');                   // ≡ import Utm from 'utm.js'
-if (typeof module!='undefined' && module.exports) var LatLon = require('./latlon-ellipsoidal.js'); // ≡ import LatLon from 'latlon-ellipsoidal.js'
-
+import Utm from './utm'
+import LatLon from './latlon-ellipsoidal'
 
 /**
  * Convert between Universal Transverse Mercator (UTM) coordinates and Military Grid Reference
@@ -254,4 +245,4 @@ Mgrs.prototype.toString = function(digits) {
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = Mgrs; // ≡ export default Mgrs
+export default Mgrs

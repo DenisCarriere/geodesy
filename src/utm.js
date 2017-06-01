@@ -1,12 +1,4 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* UTM / WGS-84 Conversion Functions                                  (c) Chris Veness 2014-2017  */
-/*                                                                                   MIT Licence  */
-/* www.movable-type.co.uk/scripts/latlong-utm-mgrs.html                                           */
-/* www.movable-type.co.uk/scripts/geodesy/docs/module-utm.html                                    */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-'use strict';
-if (typeof module!='undefined' && module.exports) var LatLon = require('./latlon-ellipsoidal.js'); // ≡ import LatLon from 'latlon-ellipsoidal.js'
+import LatLon from './latlon-ellipsoidal'
 
 
 /**
@@ -389,4 +381,4 @@ if (Math.atanh === undefined) {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = Utm; // ≡ export default Utm
+export default Utm

@@ -1,40 +1,6 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* Geodesy tools for an ellipsoidal earth model                       (c) Chris Veness 2005-2016  */
-/*                                                                                   MIT Licence  */
-/* www.movable-type.co.uk/scripts/latlong-convert-coords.html                                     */
-/* www.movable-type.co.uk/scripts/geodesy/docs/module-latlon-ellipsoidal.html                     */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+import Vector3d from './vector3d'
+import Dms from './dms'
 
-'use strict';
-if (typeof module!='undefined' && module.exports) var Vector3d = require('./vector3d.js'); // ≡ import Vector3d from 'vector3d.js'
-if (typeof module!='undefined' && module.exports) var Dms = require('./dms.js');           // ≡ import Dms from 'dms.js'
-
-
-/**
- * Library of geodesy functions for operations on an ellipsoidal earth model.
- *
- * Includes ellipsoid parameters and datums for different coordinate systems, and methods for
- * converting between them and to cartesian coordinates.
- *
- * q.v. Ordnance Survey ‘A guide to coordinate systems in Great Britain’ Section 6
- * www.ordnancesurvey.co.uk/docs/support/guide-coordinate-systems-great-britain.pdf.
- *
- * @module   latlon-ellipsoidal
- * @requires dms
- */
-
-
-/**
- * Creates lat/lon (polar) point with latitude & longitude values, on a specified datum.
- *
- * @constructor
- * @param {number}       lat - Geodetic latitude in degrees.
- * @param {number}       lon - Longitude in degrees.
- * @param {LatLon.datum} [datum=WGS84] - Datum this point is defined within.
- *
- * @example
- *     var p1 = new LatLon(51.4778, -0.0016, LatLon.datum.WGS84);
- */
 function LatLon(lat, lon, datum) {
     // allow instantiation without 'new'
     if (!(this instanceof LatLon)) return new LatLon(lat, lon, datum);
@@ -257,5 +223,4 @@ if (Number.prototype.toDegrees === undefined) {
     Number.prototype.toDegrees = function() { return this * 180 / Math.PI; };
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = LatLon, module.exports.Vector3d = Vector3d; // ≡ export { LatLon as default, Vector3d }
+export { LatLon as default, Vector3d }

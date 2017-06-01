@@ -1,32 +1,5 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* Latitude/longitude spherical geodesy tools                         (c) Chris Veness 2002-2017  */
-/*                                                                                   MIT Licence  */
-/* www.movable-type.co.uk/scripts/latlong.html                                                    */
-/* www.movable-type.co.uk/scripts/geodesy/docs/module-latlon-spherical.html                       */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+import Dms from './dms';
 
-'use strict';
-if (typeof module!='undefined' && module.exports) var Dms = require('./dms'); // ≡ import Dms from 'dms.js'
-
-
-/**
- * Library of geodesy functions for operations on a spherical earth model.
- *
- * @module   latlon-spherical
- * @requires dms
- */
-
-
-/**
- * Creates a LatLon point on the earth's surface at the specified latitude / longitude.
- *
- * @constructor
- * @param {number} lat - Latitude in degrees.
- * @param {number} lon - Longitude in degrees.
- *
- * @example
- *     var p1 = new LatLon(52.205, 0.119);
- */
 function LatLon(lat, lon) {
     // allow instantiation without 'new'
     if (!(this instanceof LatLon)) return new LatLon(lat, lon);
@@ -660,4 +633,4 @@ if (Number.prototype.toDegrees === undefined) {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = LatLon; // ≡ export default LatLon
+export default LatLon

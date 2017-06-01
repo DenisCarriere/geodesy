@@ -5,9 +5,8 @@
 /* www.movable-type.co.uk/scripts/geodesy/docs/module-latlon-nvector-spherical.html               */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 
-'use strict';
-if (typeof module!='undefined' && module.exports) var Vector3d = require('./vector3d.js'); // ≡ import Vector3d from 'vector3d.js'
-if (typeof module!='undefined' && module.exports) var Dms = require('./dms.js');           // ≡ import Dms from 'dms.js'
+import Vector3d from './vector3d'
+import Dms from './dms'
 
 
 /**
@@ -717,4 +716,4 @@ if (Math.sign === undefined) {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = LatLon, module.exports.Vector3d = Vector3d; // ≡ export { LatLon as default, Vector3d }
+export { LatLon as default, Vector3d }

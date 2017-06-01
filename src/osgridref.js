@@ -1,12 +1,4 @@
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-/* Ordnance Survey Grid Reference functions                           (c) Chris Veness 2005-2017  */
-/*                                                                                   MIT Licence  */
-/* www.movable-type.co.uk/scripts/latlong-gridref.html                                            */
-/* www.movable-type.co.uk/scripts/geodesy/docs/module-osgridref.html                              */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-
-'use strict';
-if (typeof module!='undefined' && module.exports) var LatLon = require('./latlon-ellipsoidal.js'); // ≡ import LatLon from 'latlon-ellipsoidal.js'
+import LatLon from './latlon-ellipsoidal'
 
 
 /**
@@ -296,4 +288,4 @@ OsGridRef.prototype.toString = function(digits) {
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
-if (typeof module != 'undefined' && module.exports) module.exports = OsGridRef; // ≡ export default OsGridRef
+export default OsGridRef
