@@ -1,23 +1,19 @@
-import path from 'path'
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
-import builtins from 'rollup-plugin-node-builtins'
-import globals from 'rollup-plugin-node-globals'
-import json from 'rollup-plugin-json'
 import cleanup from 'rollup-plugin-cleanup'
-const pckg = require('./package.json')
 
 export default {
-  entry: pckg['jsnext:main'],
-  dest: pckg['main'],
-  format: 'cjs',
+  entry: 'index.js',
   plugins: [
-    cleanup(),
-    json(),
-    resolve(),
-    commonjs(),
-    globals(),
-    builtins()
+    cleanup()
+  ],
+  targets: [
+    {
+      format: 'es',
+      dest: 'dist/index.es6.js'
+    },
+    {
+      format: 'cjs',
+      dest: 'dist/index.js'
+    }
   ],
   useStrict: false,
-}
+};

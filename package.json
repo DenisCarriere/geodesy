@@ -13,7 +13,7 @@
         "src/"
     ],
     "scripts": {
-        "pretest": "rollup --config rollup.config.js",
+        "pretest": "rollup -c rollup.config.js",
         "test": "mocha test/*.js",
         "lint": "eslint ."
     },
