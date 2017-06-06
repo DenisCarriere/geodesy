@@ -2,12 +2,14 @@
     "name": "geodesy-es6",
     "description": "Libraries of geodesy functions",
     "author": "Chris Veness",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "license": "MIT",
     "main": "dist/index.js",
     "jsnext:main": "index.js",
+    "types": "index.d.ts",
     "files": [
         "index.js",
+        "index.d.ts",
         "dist/",
         "src/"
     ],
